@@ -17,7 +17,9 @@ body {
 	max-width: 800px;
 	width: 90%;
 }
- 
+.formulario{
+    position: relative;
+}
 .principal {
 	background: #2A93E7;
 	border-top: 20px solid #2A75B5;
@@ -91,4 +93,7 @@ body {
     font-size: 28px;
     margin: 7px;
     display: inline-block;
+    text-align: left;
+    position: absolute;
+    left: 0px;
 }
