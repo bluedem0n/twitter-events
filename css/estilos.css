@@ -55,7 +55,7 @@ body {
 	border: 1px solid #fff;
 }
  
-/* - Tareas - */
+/* - Tweets - */
 .tareas .lista {
 	list-style: none;
 }
@@ -72,7 +72,7 @@ body {
 }
  
 .tareas .lista li a:hover {
-	text-decoration: line-through;
+    color:red;
 }
 .inputSeleccionar{
     color:  #fff;
