@@ -86,3 +86,9 @@ body {
 .titulo{
     text-align: center;
 }
+
+.iconos{
+    font-size: 28px;
+    margin: 7px;
+    display: inline-block;
+}

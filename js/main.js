@@ -1,25 +1,25 @@
- (function () {
-    var lista = document.getElementById("lista"),
+(function () {
+    var timeline = document.getElementById("timeline"),
         tweet = document.getElementById("tweet"),
         btnNuevoTweet = document.getElementById("btn-agregar");
     var agregarTweet = function () {
         var tarea = tweet.value,
-            nuevaTarea = document.createElement("li"),
+            nuevoTweet = document.createElement("li"),
             enlace = document.createElement("a"),
             contenido = document.createTextNode(tarea);
         if(tarea === "") {
-            tweet.setAttribute("placeholder", "Agrega una tarea válida");
+            tweet.setAttribute("placeholder", "Agrega un Tweet válido");
             tweet.className = "error";
             return false;
         }
         enlace.appendChild(contenido);
         enlace.setAttribute("href", "#");
-        nuevaTarea.appendChild(enlace);
-        lista.insertBefore(nuevaTarea, lista.childNodes[0]);
+        nuevoTweet.appendChild(enlace);
+        timeline.insertBefore(nuevoTweet, timeline.childNodes[0]);
         tweet.value = "";
         
-        for (var i = 0; i <= lista.children.length -1; i++){
-        lista.children[i].addEventListener("click",function(){
+        for (var i = 0; i <= timeline.children.length -1; i++){
+        timeline.children[i].addEventListener("click",function(){
             this.parentNode.removeChild(this);
         });
     }
@@ -30,14 +30,15 @@
         
     }; 
     var eliminarTweet = function(){
-         this.parentNode.removeChild(child);
+        this.parentNode.removeChild(child);
     };
+
     btnNuevoTweet.addEventListener("click",agregarTweet);
     tweet.addEventListener("click",comprobarInput);
 
-    for (var i = 0; i <= lista.children.length -1; i++){
+    for (var i = 0; i <= timeline.children.length -1; i++){
         
-        lista.children[i].addEventListener("click",eliminarTweet);
+        timeline.children[i].addEventListener("click",eliminarTweet);
     }
     
 }());

@@ -3,10 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png" />
 	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link rel="icon" type="image/png" href="/img/logo.png" />
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<title>Lista de Tareas</title>
 </head>
 <body>
@@ -15,14 +18,19 @@
 		<h1 class="titulo"> App Twitter</h1>
 			<form class="formulario" action="">
                 <textarea rows="4" cols="50" type= "text" id="tweet" placeholder="Que está pasando..."></textarea><br><br>
-				<input type="button" class="boton" id="btn-agregar" value="Agregar Tweet">
+                <div class="iconos">
+                <a href="#"><i class="fa fa-camera"></i></a>
+                <a href="#"><i class="fa fa-gift"></i></a>
+                <a href="#"><i class="fa fa-map-marker"></i></a>
+                </div>
+                <button type="button" class="boton" id="btn-agregar" value="Agregar Tweet"><i class="fa fa-twitter"></i>Tweet</button>
 			</form>
 		</div>
 	</div>
  
 	<div class="tareas">
 		<div class="wrap">
-			<ul class="lista" id="lista">
+			<ul class="lista" id="timeline">
 				<li><a href="#">Bañarme</a></li>
 				<li><a href="#">Ir a Laboratoria</a></li>
 				<li><a href="#">Hacer los ejercicios</a></li>
@@ -30,5 +38,7 @@
 		</div>
 	</div>
 	<script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
