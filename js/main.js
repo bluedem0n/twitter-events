@@ -1,8 +1,8 @@
  (function () {
     var lista = document.getElementById("lista"),
         tweet = document.getElementById("tweet"),
-        btnNuevaTarea = document.getElementById("btn-agregar");
-    var agregarTarea = function () {
+        btnNuevoTweet = document.getElementById("btn-agregar");
+    var agregarTweet = function () {
         var tarea = tweet.value,
             nuevaTarea = document.createElement("li"),
             enlace = document.createElement("a"),
@@ -29,15 +29,15 @@
         tweet.setAttribute = ("placeholder","Agrega una Tweet");
         
     }; 
-    var eliminarTarea = function(){
+    var eliminarTweet = function(){
          this.parentNode.removeChild(child);
     };
-    btnNuevaTarea.addEventListener("click",agregarTarea);
+    btnNuevoTweet.addEventListener("click",agregarTweet);
     tweet.addEventListener("click",comprobarInput);
 
     for (var i = 0; i <= lista.children.length -1; i++){
         
-        lista.children[i].addEventListener("click",eliminarTarea);
+        lista.children[i].addEventListener("click",eliminarTweet);
     }
     
 }());
