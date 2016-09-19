@@ -1,0 +1,88 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ 
+body {
+	background: #FAFAFA;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+}
+ 
+.wrap {
+	margin: auto;
+	max-width: 800px;
+	width: 90%;
+}
+ 
+.principal {
+	background: #2A93E7;
+	border-top: 20px solid #2A75B5;
+	color: #fff;
+	padding: 30px 0;
+	width: 100%;
+}
+ 
+.principal .formulario {
+	color: #212121;
+	text-align: center;
+}
+ 
+.principal .formulario textarea[type=text] {
+	margin-bottom: 10px;
+	padding: 10px;
+	width: 100%;
+}
+ 
+.principal .formulario textarea[type=text].error {
+	border: 5px solid #ea4242;
+	color: red;
+}
+ 
+.principal .formulario .boton {
+	background: none;
+	border: 1px solid #2A75B5;
+	color: #fff;
+	display: inline-block;
+	font-size: 16px;
+	padding: 15px;
+}
+ 
+.principal .formulario .boton:hover {
+	border: 1px solid #fff;
+}
+ 
+/* - Tareas - */
+.tareas .lista {
+	list-style: none;
+}
+ 
+.tareas .lista li {
+	border-bottom: 1px solid #B6B6B6;
+}
+ 
+.tareas .lista li a {
+	color: #212121;
+	display: block;
+	padding: 20px 0;
+	text-decoration: none;
+}
+ 
+.tareas .lista li a:hover {
+	text-decoration: line-through;
+}
+.inputSeleccionar{
+    color:  #fff;
+}
+.subir{
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 18px;
+    color: azure;
+}
+.titulo{
+    text-align: center;
+}
