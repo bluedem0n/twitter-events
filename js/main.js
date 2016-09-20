@@ -1,7 +1,8 @@
 window.onload = function(){
     var timeline = document.getElementById("timeline"),
         tweet = document.getElementById("tweet"),
-        btnNuevoTweet = document.getElementById("btn-agregar");
+        btnNuevoTweet = document.getElementById("btn-agregar"),
+        contador = document.getElementById("contar");
     var agregarTweet = function () {
         var tarea = tweet.value,
             nuevoTweet = document.createElement("div"),
@@ -20,6 +21,7 @@ window.onload = function(){
         nuevoTweet.className = "imagen textTweet";
         timeline.insertBefore(nuevoTweet, timeline.childNodes[0]);
         tweet.value = "";
+        contador.textContent = "140 caracteres restantes";
         
         for (var i = 0; i <= timeline.children.length -1; i++){
         timeline.children[i].addEventListener("click",function(){
