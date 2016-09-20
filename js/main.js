@@ -1,4 +1,5 @@
 window.onload = function(){
+    
     var timeline = document.getElementById("timeline"),
         tweet = document.getElementById("tweet"),
         btnNuevoTweet = document.getElementById("btn-agregar"),
@@ -9,13 +10,6 @@ window.onload = function(){
             nuevoTweet = document.createElement("div"),
             textoTweet = document.createElement("p"),
             contenido = document.createTextNode(tarea);  
-        
-         /* Validando que no ingrese Tweet vacío */
-        if(tarea === "" ) {
-            tweet.setAttribute("placeholder", "Agrega un Tweet válido");
-            tweet.className = "error";
-            return false;
-        }
 
         textoTweet.appendChild(contenido);
         nuevoTweet.appendChild(textoTweet);
@@ -79,13 +73,7 @@ window.onload = function(){
           setTimeout(function(){
             textarea.style.cssText = 'height:130px; padding:0';
             textarea.style.cssText = 'height:' + textarea.scrollHeight + 'px';
-            },0);
-       /*if(tweet.trim().value.length === 0) {
-            btnNuevoTweet.disabled= true;
-        }else{
-            btnNuevoTweet.disabled= false;
-        }
-           */  
+            },0); 
         }
    
     /* Eventos */
