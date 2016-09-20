@@ -24,76 +24,83 @@ body {
 	background: #2A93E7;
 	border-top: 20px solid #2A75B5;
 	color: #fff;
-	padding: 30px 0;
+	padding: 15px 0;
 	width: 100%;
 }
  
 .principal .formulario {
 	color: #212121;
-	text-align: center;
+	text-align: right;
 }
  
 .principal .formulario textarea[type=text] {
 	margin-bottom: 10px;
 	padding: 10px;
 	width: 100%;
+	resize: none;
+	color: black;
 }
  
 .principal .formulario textarea[type=text].error {
 	border: 5px solid #ea4242;
 	color: red;
+	color: black;
 }
  
-.principal .formulario .boton {
-	background: none;
+.principal .formulario {
 	border: 1px solid #2A75B5;
 	color: #fff;
-	display: inline-block;
 	font-size: 16px;
-	padding: 15px;
+	padding: 14px;
 }
- 
-.principal .formulario .boton:hover {
-	border: 1px solid #fff;
-}
- 
+
 /* - Tweets - */
 .tareas .lista {
 	list-style: none;
 }
  
 .tareas .lista li {
-	border-bottom: 1px solid #B6B6B6;
+	margin-top: 10px;
+	border: 1px solid #B6B6B6;
+	border-radius: 10px;
 }
  
 .tareas .lista li a {
-	color: #212121;
-	display: block;
-	padding: 20px 0;
-	text-decoration: none;
+	color: #2A93E7;
+    display: block;
+    padding: 20px 0;
+    text-decoration: none;
+    margin-left: 14px;
 }
  
 .tareas .lista li a:hover {
     color:red;
 }
-.inputSeleccionar{
-    color:  #fff;
-}
-.subir{
-    text-align: center;
-    padding-bottom: 15px;
-    font-size: 18px;
-    color: azure;
-}
+
 .titulo{
     text-align: center;
 }
-
 .iconos{
-    font-size: 28px;
-    margin: 7px;
+    font-size: 26px;
     display: inline-block;
-    text-align: left;
     position: absolute;
-    left: 0px;
+    left: 5%;
 }
+.icono{
+	margin-left: 10px;
+}
+.icono:hover{
+	border: 1px solid transparent;
+    border-radius: 4px;
+	padding: 4px;
+	background-color: #5bc0de;
+}
+
+.contador{
+	color:black;
+	display: inline-block;
+	font-size: 14px;
+}
+
+
+

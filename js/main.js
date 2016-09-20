@@ -1,5 +1,5 @@
-(function () {
-    var timeline = document.getElementById("timeline"),
+window.onload = function(){
+      var timeline = document.getElementById("timeline"),
         tweet = document.getElementById("tweet"),
         btnNuevoTweet = document.getElementById("btn-agregar");
     var agregarTweet = function () {
@@ -40,5 +40,7 @@
         
         timeline.children[i].addEventListener("click",eliminarTweet);
     }
-    
-}());
+
+}
+
+
