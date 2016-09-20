@@ -48,13 +48,24 @@ window.onload = function(){
         if (longitud >= limite){
             document.getElementById("contar").classList.add("limite");
             btnNuevoTweet.disabled = true;
-        }  
+        }  else{
+            
+             document.getElementById("contar").classList.remove("limite");
+        }
     }
-
+    
+    var darEnter = function(e){
+       var code = (e.keyCode ? e.keyCode : e.which);
+       if(code == 13) { //Codigo de la tecla Enter
+        
+       }
+    }
+    
     /* Eventos */
     btnNuevoTweet.addEventListener("click",agregarTweet);
     tweet.addEventListener("click",comprobarInput);
     tweet.addEventListener("keydown", contarCaracteres);
+    tweet.addEventListener("keypress",darEnter);
 
     for (var i = 0; i <= timeline.children.length -1; i++){
         

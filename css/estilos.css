@@ -109,6 +109,9 @@ body {
 .limite{
 	color: green;
 }
+.normal{
+    color: black;
+}
 
 .perfil{
 	display: inline-block;
