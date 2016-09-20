@@ -2,21 +2,22 @@ window.onload = function(){
     var timeline = document.getElementById("timeline"),
         tweet = document.getElementById("tweet"),
         btnNuevoTweet = document.getElementById("btn-agregar");
-    
     var agregarTweet = function () {
         var tarea = tweet.value,
-            nuevoTweet = document.createElement("li"),
-            enlace = document.createElement("a"),
+            nuevoTweet = document.createElement("div"),
+            textoTweet = document.createElement("p"),
             contenido = document.createTextNode(tarea);
         
+        /* Validando que no ingrese Tweet vacío */
         if(tarea === "") {
             tweet.setAttribute("placeholder", "Agrega un Tweet válido");
             tweet.className = "error";
             return false;
         }
-        enlace.appendChild(contenido);
-        enlace.setAttribute("href", "#");
-        nuevoTweet.appendChild(enlace);
+
+        textoTweet.appendChild(contenido);
+        nuevoTweet.appendChild(textoTweet);
+        nuevoTweet.className = "imagen textTweet";
         timeline.insertBefore(nuevoTweet, timeline.childNodes[0]);
         tweet.value = "";
         
@@ -28,15 +29,12 @@ window.onload = function(){
     };
     
     /* Comprobando Input */
-    
     var comprobarInput = function(){
         tweet.className = "";
         tweet.setAttribute = ("placeholder","Agrega una Tweet");
-        
     }; 
     
     /* Eliminando Tweet */
-    
     var eliminarTweet = function(){
         this.parentNode.removeChild(child);
     };
@@ -54,7 +52,6 @@ window.onload = function(){
     }
 
     /* Eventos */
-    
     btnNuevoTweet.addEventListener("click",agregarTweet);
     tweet.addEventListener("click",comprobarInput);
     tweet.addEventListener("keydown", contarCaracteres);

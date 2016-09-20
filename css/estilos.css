@@ -11,15 +11,18 @@ body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 }
- 
+
+
 .wrap {
 	margin: auto;
 	max-width: 800px;
 	width: 90%;
 }
+
 .formulario{
     position: relative;
 }
+
 .principal {
 	background: #2A93E7;
 	border-top: 20px solid #2A75B5;
@@ -33,15 +36,16 @@ body {
 	text-align: right;
 }
  
-.principal .formulario textarea[type=text] {
+.principal .formulario textarea{
 	margin-bottom: 10px;
-	padding: 10px;
-	width: 100%;
-	resize: none;
-	color: black;
+    padding: 15px;
+    width: 80%;
+    resize: none;
+    color: black;
+	border-radius: 10px;
 }
  
-.principal .formulario textarea[type=text].error {
+.principal .formulario textarea.error {
 	border: 5px solid #ea4242;
 	color: red;
 	color: black;
@@ -55,36 +59,36 @@ body {
 }
 
 /* - Tweets - */
-.tareas .lista {
-	list-style: none;
+.lista {
+	position: relative;
+    padding: 10px;
+    margin-top: 10px;
 }
- 
-.tareas .lista li {
-	margin-top: 10px;
-	border: 1px solid #B6B6B6;
-	border-radius: 10px;
+
+.lista p{
+	padding-top: 15px;
 }
- 
-.tareas .lista li a {
-	color: #2A93E7;
-    display: block;
-    padding: 20px 0;
-    text-decoration: none;
-    margin-left: 14px;
+
+.textTweet {
+    margin: 10px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    height: 80px;
+    padding-left: 100px;
 }
- 
-.tareas .lista li a:hover {
-    color:red;
+.textTweet:hover{
+	color: red;
 }
+
 
 .titulo{
     text-align: center;
 }
 .iconos{
-    font-size: 26px;
+    font-size: 25px;
     display: inline-block;
     position: absolute;
-    left: 5%;
+    left: 22%;
 }
 .icono{
 	margin-left: 10px;
@@ -106,5 +110,15 @@ body {
 	color: green;
 }
 
+.perfil{
+	display: inline-block;
+    float: left;
+    padding-left: 12px;
+    border-radius: 10px;
+}
 
 
+.imagen {
+    background-image: url(../img/perfil2.png);
+    background-repeat: no-repeat;
+}
