@@ -1,10 +1,9 @@
 window.onload = function(){
-    
     var timeline = document.getElementById("timeline"),
         tweet = document.getElementById("tweet"),
         btnNuevoTweet = document.getElementById("btn-agregar"),
         contador = document.getElementById("contar");
-        btnNuevoTweet.disabled= true;
+        btnNuevoTweet.disabled = true;
     var agregarTweet = function () {
         var tarea = tweet.value,
             nuevoTweet = document.createElement("div"),
@@ -24,19 +23,12 @@ window.onload = function(){
         });
     }
     };
-
-    /* Comprobando Input */
-    var comprobarInput = function(){
-        tweet.className = "";
-        tweet.setAttribute = ("placeholder","Agrega una Tweet");
-    }; 
     
     /* Eliminando Tweet */
     var eliminarTweet = function(){
         this.parentNode.removeChild(child);
     };
-    
-    
+      
     var maximo = [120,130,140];
     var color = ["verde","rosado","morado"]; 
     
@@ -75,10 +67,24 @@ window.onload = function(){
             textarea.style.cssText = 'height:' + textarea.scrollHeight + 'px';
             },0); 
         }
-   
+        
+    /* Mostrar la hora */
+        /*function agregarHora(tweet){
+		var fecha = new Date();
+        var hora = fecha.getHours();
+        var minuto = fecha.getMinutes();
+            if (minuto < 10) {
+                minuto = "0" + minuto;
+            }
+        var horaImprimible = hora + " : " + minuto + " : ";
+        var hora = document.createElement("div");
+		hora.innerText = horaImprimible;
+
+		tweet.insertBefore(hora,tweet.childNodes[0]);  
+    }*/
+        
     /* Eventos */
     btnNuevoTweet.addEventListener("click",agregarTweet);
-    tweet.addEventListener("click",comprobarInput);
     tweet.addEventListener("keyup", contarCaracteres);
     tweet.addEventListener("keydown",darEnter);
 
