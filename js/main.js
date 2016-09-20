@@ -1,7 +1,8 @@
 window.onload = function(){
     var timeline = document.getElementById("timeline"),
         tweet = document.getElementById("tweet"),
-        btnNuevoTweet = document.getElementById("btn-agregar");
+        btnNuevoTweet = document.getElementById("btn-agregar"),
+        contador = document.getElementById("contar");
     var agregarTweet = function () {
         var tarea = tweet.value,
             nuevoTweet = document.createElement("div"),
@@ -20,6 +21,7 @@ window.onload = function(){
         nuevoTweet.className = "imagen textTweet";
         timeline.insertBefore(nuevoTweet, timeline.childNodes[0]);
         tweet.value = "";
+        contador.textContent = "140 caracteres restantes";
         
         for (var i = 0; i <= timeline.children.length -1; i++){
         timeline.children[i].addEventListener("click",function(){
@@ -48,9 +50,7 @@ window.onload = function(){
         btnNuevoTweet.disabled=false; 
         var limite = 140;
         var longitud = document.getElementById("tweet").value.length;
-        var contador = document.getElementById("contar");
-            contador.innerHTML = limite - longitud + " caracteres restantes"; 
-        
+        contador.innerHTML = limite - longitud + " caracteres restantes";   
         if(longitud >= maximo[0] && longitud < maximo[1]) {         
                contador.classList.remove(color[1]);
                contador.classList.add(color[0]);
