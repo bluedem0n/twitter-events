@@ -39,21 +39,36 @@ window.onload = function(){
         this.parentNode.removeChild(child);
     };
     
+    
+    var maximo = [120,130,140];
+    var color = ["verde","rosado","morado"]; 
+    
     /* Contando Caracteres */
     var contarCaracteres = function(){
         btnNuevoTweet.disabled=false; 
         var limite = 140;
         var longitud = document.getElementById("tweet").value.length;
-        document.getElementById("contar").innerHTML = limite - longitud + " caracteres restantes"; 
-        if (longitud >= limite){
-            document.getElementById("contar").classList.add("limite");
-            btnNuevoTweet.disabled = true;
-        }  else{
-            
-             document.getElementById("contar").classList.remove("limite");
-        }
+        var contador = document.getElementById("contar");
+            contador.innerHTML = limite - longitud + " caracteres restantes"; 
+        
+        if(longitud >= maximo[0] && longitud < maximo[1]) {         
+               contador.classList.remove(color[1]);
+               contador.classList.add(color[0]);
+       } else if(longitud >= maximo[1] && longitud < maximo[2]) {   
+               contador.classList.remove(color[0]);
+               contador.classList.remove(color[2]);
+               contador.classList.add(color[1]);    
+       } else if(longitud >= maximo[2]){                           
+               contador.classList.remove(color[1]);
+               contador.classList.add(color[2]);
+               btnNuevoTweet.disabled = true;
+       } else {
+               for(var i = 0; i < maximo.length-1; i++){
+                   contador.classList.remove(color[i]);        
+               };
+       }
     }
-    
+     
     var darEnter = function(e){
        var code = (e.keyCode ? e.keyCode : e.which);
        if(code == 13) { //Codigo de la tecla Enter
@@ -64,7 +79,7 @@ window.onload = function(){
     /* Eventos */
     btnNuevoTweet.addEventListener("click",agregarTweet);
     tweet.addEventListener("click",comprobarInput);
-    tweet.addEventListener("keydown", contarCaracteres);
+    tweet.addEventListener("keyup", contarCaracteres);
     tweet.addEventListener("keypress",darEnter);
 
     for (var i = 0; i <= timeline.children.length -1; i++){
@@ -73,5 +88,4 @@ window.onload = function(){
     }
 
 }
-
 
