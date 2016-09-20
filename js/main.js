@@ -3,14 +3,15 @@ window.onload = function(){
         tweet = document.getElementById("tweet"),
         btnNuevoTweet = document.getElementById("btn-agregar"),
         contador = document.getElementById("contar");
+        btnNuevoTweet.disabled= true;
     var agregarTweet = function () {
         var tarea = tweet.value,
             nuevoTweet = document.createElement("div"),
             textoTweet = document.createElement("p"),
-            contenido = document.createTextNode(tarea);
+            contenido = document.createTextNode(tarea);  
         
-        /* Validando que no ingrese Tweet vacío */
-        if(tarea === "") {
+         /* Validando que no ingrese Tweet vacío */
+        if(tarea === "" ) {
             tweet.setAttribute("placeholder", "Agrega un Tweet válido");
             tweet.className = "error";
             return false;
@@ -29,7 +30,7 @@ window.onload = function(){
         });
     }
     };
-    
+
     /* Comprobando Input */
     var comprobarInput = function(){
         tweet.className = "";
@@ -70,24 +71,32 @@ window.onload = function(){
                };
        }
     }
-     
-    var darEnter = function(e){
-       var code = (e.keyCode ? e.keyCode : e.which);
-       if(code == 13) { //Codigo de la tecla Enter
-        
-       }
-    }
     
+    /* Crecer Text Area con un Enter */
+    
+        var darEnter = function(){
+          var textarea = this;
+          setTimeout(function(){
+            textarea.style.cssText = 'height:130px; padding:0';
+            textarea.style.cssText = 'height:' + textarea.scrollHeight + 'px';
+            },0);
+       /*if(tweet.trim().value.length === 0) {
+            btnNuevoTweet.disabled= true;
+        }else{
+            btnNuevoTweet.disabled= false;
+        }
+           */  
+        }
+   
     /* Eventos */
     btnNuevoTweet.addEventListener("click",agregarTweet);
     tweet.addEventListener("click",comprobarInput);
     tweet.addEventListener("keyup", contarCaracteres);
-    tweet.addEventListener("keypress",darEnter);
+    tweet.addEventListener("keydown",darEnter);
 
     for (var i = 0; i <= timeline.children.length -1; i++){
         
         timeline.children[i].addEventListener("click",eliminarTweet);
     }
-
-}
-
+  
+};

@@ -43,6 +43,8 @@ body {
     resize: none;
     color: black;
 	border-radius: 10px;
+    overflow: hidden;
+    height: 130px;
 }
  
 .principal .formulario textarea.error {
