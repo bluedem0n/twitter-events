@@ -28,6 +28,7 @@ window.onload = function(){
         if(minuto < 10){
             minuto = "0" + minuto;
         }
+
         var horaImprimible = hora + ":" + minuto + " ";
         horaImprimir.innerText = horaImprimible;
 

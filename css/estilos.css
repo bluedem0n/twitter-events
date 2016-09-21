@@ -134,8 +134,7 @@ body {
 }
 
 span{
-    text-align: right;
     margin: 10px;
-    color:cornflowerblue;
-    position: relative;
+    color: cornflowerblue;
+    float: right;
 }
