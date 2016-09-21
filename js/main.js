@@ -4,24 +4,39 @@ window.onload = function(){
         btnNuevoTweet = document.getElementById("btn-agregar"),
         contador = document.getElementById("contar");
         btnNuevoTweet.disabled = true;
+
+
     var agregarTweet = function () {
         var tarea = tweet.value,
             nuevoTweet = document.createElement("div"),
             textoTweet = document.createElement("p"),
-            contenido = document.createTextNode(tarea);  
+            contenido = document.createTextNode(tarea),
+            horaImprimir = document.createElement("span");
 
         textoTweet.appendChild(contenido);
         nuevoTweet.appendChild(textoTweet);
+        nuevoTweet.appendChild(horaImprimir);
         nuevoTweet.className = "imagen textTweet";
         timeline.insertBefore(nuevoTweet, timeline.childNodes[0]);
         tweet.value = "";
         contador.textContent = "140 caracteres restantes";
         
+        var fecha = new Date();
+        var hora = fecha.getHours();
+        var minuto = fecha.getMinutes();
+
+        if(minuto < 10){
+            minuto = "0" + minuto;
+        }
+        var horaImprimible = hora + ":" + minuto + " ";
+        horaImprimir.innerText = horaImprimible;
+
         for (var i = 0; i <= timeline.children.length -1; i++){
         timeline.children[i].addEventListener("click",function(){
             this.parentNode.removeChild(this);
         });
     }
+
     };
     
     /* Eliminando Tweet */
@@ -67,22 +82,7 @@ window.onload = function(){
             textarea.style.cssText = 'height:' + textarea.scrollHeight + 'px';
             },0); 
         }
-        
-    /* Mostrar la hora */
-        /*function agregarHora(tweet){
-		var fecha = new Date();
-        var hora = fecha.getHours();
-        var minuto = fecha.getMinutes();
-            if (minuto < 10) {
-                minuto = "0" + minuto;
-            }
-        var horaImprimible = hora + " : " + minuto + " : ";
-        var hora = document.createElement("div");
-		hora.innerText = horaImprimible;
 
-		tweet.insertBefore(hora,tweet.childNodes[0]);  
-    }*/
-        
     /* Eventos */
     btnNuevoTweet.addEventListener("click",agregarTweet);
     tweet.addEventListener("keyup", contarCaracteres);
