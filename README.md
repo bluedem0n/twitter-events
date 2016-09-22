@@ -50,7 +50,6 @@ twitter-events/
   * Comprobar Input.
 
 ```
-  
   #### Agregar Tweet
   
 ![](http://i68.tinypic.com/mifp8m.png)
@@ -72,11 +71,11 @@ twitter-events/
 
 ```
 
-  #### No ingresar texto vacío 
+#### No ingresar texto vacío 
   
   ![](http://i65.tinypic.com/ru0f7l.png)
   
-  #### Contar la cantidad de caracteres de forma regresiva 
+#### Contar la cantidad de caracteres de forma regresiva 
    
   ![](http://i64.tinypic.com/302mlpc.png)
      
