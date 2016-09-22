@@ -45,60 +45,57 @@ twitter-events/
 ```
    Funcionalidades:
    
-  * Agregar Tweet en Html
-  * Eliminar Tweet
-  * Comprobar Input
+  * Agregar Tweet en Html.
+  * Eliminar Tweet.
+  * Comprobar Input.
 
 ```
- ### [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.1)
+[Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.1)
 
 ## Version 0.0.2
 
 ```
    Funcionalidades:
    
-  * Agregar Tweet en Html
-  * Eliminar Tweet
-  * Comprobar Input
+  * No ingresar texto vacío (deshabilitar el botón de enviar).
+  * Contar la cantidad de caracteres de forma regresiva.
 
 ```
- ### [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.2)
+[Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.2)
 
 ## Version 0.0.3
 
 ```
    Funcionalidades:
    
-  * Agregar Tweet en Html
-  * Eliminar Tweet
-  * Comprobar Input
+  * Si pasa los 140 caracteres, deshabilitar el botón.
+  * Si pasa los 120 caracteres, mostrar el contador con color verde.
+  * Si pasa los 130 caracteres, mostrar el contador con color rosado.
+  * Si pasa los 140 caracteres, mostrar el contador en negativo y con color morado.
 
 ```
- ### [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.3)
+[Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.3)
 
 ## Version 0.0.4
 
 ```
-   Funcionalidades:
+ Funcionalidades:
    
-  * Agregar Tweet en Html
-  * Eliminar Tweet
-  * Comprobar Input
+  * Al presionar enter  crece el textarea de acuerdo al tamaño del texto.
 
 ```
- ### [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.4)
+[Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.4)
 
 ## Version 0.0.5
 
 ```
    Funcionalidades:
    
-  * Agregar Tweet en Html
-  * Eliminar Tweet
-  * Comprobar Input
+  * Si la cantidad de caracteres ingresados (sin dar un enter), supera al tamaño del textarea por defecto, debe de agregarse una línea más para que no aparezca el scroll. (Si en caso aplica).
+
 
 ```
- ### [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.5)
+ [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.5)
 
 
 ## Version 0.0.6
@@ -106,9 +103,8 @@ twitter-events/
 ```
    Funcionalidades:
    
-  * Agregar Tweet en Html
-  * Eliminar Tweet
-  * Comprobar Input
+  * Agregar la hora en que se publicó el tweet. En el formato de 24 horas: hh:mm
+ 
 
 ```
- ### [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.6)
+ [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.6)
