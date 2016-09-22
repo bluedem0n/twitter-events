@@ -50,11 +50,12 @@ twitter-events/
   * Comprobar Input.
 
 ```
-  #### Agregar Tweet
+#### Agregar Tweet
   
 ![](http://i68.tinypic.com/mifp8m.png)
+
+#### Eliminar Tweet : 
   
-  ####Eliminar Tweet : 
   Al situarse sobre el Tweet cambia de color a rojo y con el evento click eliminamos el Tweet que se acaba de agregar.
   
  ![](http://i63.tinypic.com/dqpxf5.png)
