@@ -9,12 +9,12 @@ Maqueta básica de un textarea de Twitter utilizando eventos de Javascript  y Bo
 ## Versiones del Proyecto
 
 - [Arbol del Proyecto](#directorios-y-archivos)
-- [V.0.0.1](#version-0.0.1)
-- [V.0.0.2](#version-0.0.2)
-- [V.0.0.3](#version-0.0.3)
-- [V.0.0.4](#version-0.0.4)
-- [V.0.0.5](#version-0.0.5)
-- [V.0.0.6](#version-0.0.6)
+- [V.0.0.1](#version-1)
+- [V.0.0.2](#version-2)
+- [V.0.0.3](#version-3)
+- [V.0.0.4](#version-4)
+- [V.0.0.5](#version-5)
+- [V.0.0.6](#version-6)
 
 ## Directorios y Archivos
 
@@ -40,7 +40,7 @@ twitter-events/
 
 ```
 
-## Version 0.0.1
+## Version 1
 
 ```
    Funcionalidades:
@@ -52,7 +52,7 @@ twitter-events/
 ```
 [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.1)
 
-## Version 0.0.2
+## Version 2
 
 ```
    Funcionalidades:
@@ -63,7 +63,7 @@ twitter-events/
 ```
 [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.2)
 
-## Version 0.0.3
+## Version 3
 
 ```
    Funcionalidades:
@@ -76,7 +76,7 @@ twitter-events/
 ```
 [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.3)
 
-## Version 0.0.4
+## Version 4
 
 ```
  Funcionalidades:
@@ -86,7 +86,7 @@ twitter-events/
 ```
 [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.4)
 
-## Version 0.0.5
+## Version 5
 
 ```
    Funcionalidades:
@@ -98,7 +98,7 @@ twitter-events/
  [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.5)
 
 
-## Version 0.0.6
+## Version 6
 
 ```
    Funcionalidades:
