@@ -5,17 +5,23 @@ window.onload = function(){
         contador = document.getElementById("contar");
         btnNuevoTweet.disabled = true;
 
-
     var agregarTweet = function () {
         var tarea = tweet.value,
             nuevoTweet = document.createElement("div"),
             textoTweet = document.createElement("p"),
             contenido = document.createTextNode(tarea),
-            horaImprimir = document.createElement("span");
-
+            nuevaHora = document.createElement("span");
+        
+        
+        /* Validacion de TextArea Vacio */ 
+        if(tarea === "" || tarea.trim().length === 0) {
+            btnNuevoTweet.disabled=true;
+            return false;
+        }
+        
         textoTweet.appendChild(contenido);
         nuevoTweet.appendChild(textoTweet);
-        nuevoTweet.appendChild(horaImprimir);
+        nuevoTweet.appendChild(nuevaHora);
         nuevoTweet.className = "imagen textTweet";
         timeline.insertBefore(nuevoTweet, timeline.childNodes[0]);
         tweet.value = "";
@@ -24,13 +30,27 @@ window.onload = function(){
         var fecha = new Date();
         var hora = fecha.getHours();
         var minuto = fecha.getMinutes();
-
+        var ampm = "";
+        
         if(minuto < 10){
             minuto = "0" + minuto;
         }
+        
+        /* Validacion AM / PM */
+        
+        if(hora>=12){
+            hora = hora-12;
+            ampm = "PM";
+            
+        }else{
+            ampm = "AM";
+        }
+        if(hora == 0){
+            hora = 12;
+        }
 
-        var horaImprimible = hora + ":" + minuto + " ";
-        horaImprimir.innerText = horaImprimible;
+        var horaTotal = hora + ":" + minuto + " " + ampm;
+        nuevaHora.innerText = horaTotal;
 
         for (var i = 0; i <= timeline.children.length -1; i++){
         timeline.children[i].addEventListener("click",function(){
@@ -42,13 +62,14 @@ window.onload = function(){
     
     /* Eliminando Tweet */
     var eliminarTweet = function(){
-        this.parentNode.removeChild(child);
+        this.parentNode.removeChild(this);
     };
       
     var maximo = [120,130,140];
     var color = ["verde","rosado","morado"]; 
     
     /* Contando Caracteres */
+    
     var contarCaracteres = function(){
         btnNuevoTweet.disabled=false; 
         var limite = 140;
@@ -83,15 +104,15 @@ window.onload = function(){
             textarea.style.cssText = 'height:' + textarea.scrollHeight + 'px';
             },0); 
         }
-
+        
     /* Eventos */
     btnNuevoTweet.addEventListener("click",agregarTweet);
     tweet.addEventListener("keyup", contarCaracteres);
     tweet.addEventListener("keydown",darEnter);
 
-    for (var i = 0; i <= timeline.children.length -1; i++){
-        
-        timeline.children[i].addEventListener("click",eliminarTweet);
-    }
+    // Borrando Tweets
+	for (var i = 0; i <= timeline.children.length -1; i++) {
+		timeline.children[i].addEventListener("click", eliminarTweet);
+	}
   
 };

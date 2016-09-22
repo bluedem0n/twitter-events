@@ -46,6 +46,11 @@ body {
 	border-radius: 10px;
     height: 130px;
 }
+
+.principal .formulario textarea[type=text].error {
+	border: 5px solid #ea4242;
+	color: red;
+}
  
 .principal .formulario {
 	border: 1px solid #2A75B5;
@@ -117,7 +122,7 @@ body {
 }
 
 .imagen {
-    background-image: url(../img/perfil2.png);
+    background-image: url(../img/real.png);
     background-repeat: no-repeat;
 }
 
@@ -132,6 +137,8 @@ body {
 .morado{
     color:mediumpurple;
 }
+
+/* Hora */
 
 span{
     margin: 10px;
