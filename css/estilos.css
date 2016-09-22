@@ -37,18 +37,19 @@ body {
 }
  
 .principal .formulario textarea{
+    overflow: hidden;
 	margin-bottom: 10px;
     padding: 15px;
     width: 80%;
     resize: none;
     color: black;
 	border-radius: 10px;
+    height: 130px;
 }
- 
-.principal .formulario textarea.error {
+
+.principal .formulario textarea[type=text].error {
 	border: 5px solid #ea4242;
 	color: red;
-	color: black;
 }
  
 .principal .formulario {
@@ -73,7 +74,7 @@ body {
     margin: 10px;
     background-color: #F5F5F5;
     border-radius: 10px;
-    height: 80px;
+    height: 90px;
     padding-left: 100px;
 }
 .textTweet:hover{
@@ -114,14 +115,14 @@ body {
 }
 
 .perfil{
-	display: inline-block;
-    float: left;
-    padding-left: 12px;
+    display: inline-block;
     border-radius: 10px;
+    position: relative;
+    float: left;
 }
 
 .imagen {
-    background-image: url(../img/perfil2.png);
+    background-image: url(../img/real.png);
     background-repeat: no-repeat;
 }
 
@@ -135,4 +136,12 @@ body {
 }
 .morado{
     color:mediumpurple;
+}
+
+/* Hora */
+
+span{
+    margin: 10px;
+    color: cornflowerblue;
+    float: right;
 }

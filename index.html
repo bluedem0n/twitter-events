@@ -5,20 +5,20 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="icon" type="image/png" href="img/icono.png"/>
 	<link rel="stylesheet" href="css/estilos.css">
-	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<!-- Bootstrap CSS -->
-    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<title>Twitter</title>
 </head>
 <body>
 	<div class="principal">
 		<div class="wrap">
-		<h1 class="titulo"> App Twitter</h1>
+		<h1 class="titulo">App Twitter</h1>
 			<form accept-charset="UTF-8" class="formulario well" action="">
 				<img class="perfil" src="img/perfil.jpg">
-                <textarea rows="4" cols="50" type= "text" id="tweet" placeholder="¿Qué está pasando?"></textarea><br><br>
+                <textarea rows="4" cols="40" type= "text" id="tweet" placeholder="¿Qué está pasando?"></textarea><br><br>
                 <div class="iconos">
                 <a href="#"><i class="fa fa-camera icono"></i></a>
                 <a href="#"><i class="fa fa-gift icono"></i></a>
@@ -31,11 +31,15 @@
 	</div>
 		<div class="wrap">
 			<div class="lista" id="timeline">
-			<p class="textTweet imagen">"El choque de sus labios con los míos fue la creación de mil constelaciones dentro de mi"</p>
+			<div class="textTweet imagen">
+			<p>"El choque de sus labios con los míos fue la creación de mil constelaciones dentro de mi"</p>
+			<span class="hora" id="hora">3:52 PM</span>
+			<p id="ampm" class="ampm"></p>
+			</div>
 			</div>
 		</div>
 	<script src="js/main.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
