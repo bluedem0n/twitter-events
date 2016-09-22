@@ -3,7 +3,7 @@ Maqueta básica de un textarea de Twitter utilizando eventos de Javascript  y Bo
 
 
 ![](http://i64.tinypic.com/14brlkx.png)
-### [Ir a el demo](https://sthecrash.github.io/twitter-events)
+### [Ir al demo](https://sthecrash.github.io/twitter-events)
 
 
 ## Versiones del Proyecto
