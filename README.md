@@ -126,7 +126,9 @@ twitter-events/
 ```
    Funcionalidades:
    
-  * Si la cantidad de caracteres ingresados (sin dar un enter), supera al tamaño del textarea por defecto, debe de agregarse una línea más para que no aparezca el scroll. (Si en caso aplica).
+  * Si la cantidad de caracteres ingresados (sin dar un enter), supera al tamaño del textarea por defecto,
+  
+  debe de agregarse una línea más para que no aparezca el scroll. (Si en caso aplica).
 
 
 ```
