@@ -12,7 +12,6 @@ window.onload = function(){
             contenido = document.createTextNode(tarea),
             nuevaHora = document.createElement("span");
         
-        
         /* Validacion de TextArea Vacio */ 
         if(tarea === "" || tarea.trim().length === 0) {
             btnNuevoTweet.disabled=true;
@@ -95,18 +94,29 @@ window.onload = function(){
     
     /* Crecer Text Area con un Enter */
     
-        var darEnter = function(){
-          var textarea = this;
-          setTimeout(function(){
-            textarea.style.cssText = 'height:130px; padding:0';
-            textarea.style.cssText = 'height:' + textarea.scrollHeight + 'px';
-            },0); 
+       function darEnter(key){
+        if(key == 13){
+            tweet.rows++;
+        }else if(key == 8){
+            tweet.rows--;
         }
+        if(tweet.rows < 3){
+            tweet.rows = 2;    
+        }
+    }
+    function autoScroll(textArea) {
+        textArea.style.height = "130px";
+        textArea.style.height = (textArea.scrollHeight)+"px";    
+    }
         
     /* Eventos */
     btnNuevoTweet.addEventListener("click",agregarTweet);
-    tweet.addEventListener("keyup", contarCaracteres);
-    tweet.addEventListener("keydown",darEnter);
+    tweet.addEventListener("keyup",function(e){
+        var key = e.keyCode;
+        contarCaracteres(tweet);
+        darEnter(key);
+        autoScroll(tweet);
+    });
 
     // Borrando Tweets
 	for (var i = 0; i <= timeline.children.length -1; i++) {
