@@ -37,7 +37,7 @@ twitter-events/
 │   ├── estilos.css
 │   ├── font-awesome.min.css
 │   └── normalize.css
-
+└── 
 ```
 
 ## Version 1
@@ -50,6 +50,16 @@ twitter-events/
   * Comprobar Input.
 
 ```
+#### Agregar Tweet
+  
+![](http://i68.tinypic.com/mifp8m.png)
+
+#### Eliminar Tweet : 
+  
+  Al situarse sobre el Tweet cambia de color a rojo y con el evento click eliminamos el Tweet que se acaba de agregar.
+  
+ ![](http://i63.tinypic.com/dqpxf5.png)
+
 [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.1)
 
 ## Version 2
@@ -61,6 +71,15 @@ twitter-events/
   * Contar la cantidad de caracteres de forma regresiva.
 
 ```
+
+#### No ingresar texto vacío 
+  
+  ![](http://i65.tinypic.com/ru0f7l.png)
+  
+#### Contar la cantidad de caracteres de forma regresiva 
+   
+  ![](http://i64.tinypic.com/302mlpc.png)
+     
 [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.2)
 
 ## Version 3
@@ -74,6 +93,19 @@ twitter-events/
   * Si pasa los 140 caracteres, mostrar el contador en negativo y con color morado.
 
 ```
+
+   + 120 caracteres : color verde.
+   
+     ![](http://i66.tinypic.com/2i2c5tv.png)
+     
+   + 130 caracteres : color rosado.
+   
+     ![](http://i66.tinypic.com/28uhixz.png)
+     
+   + más de 140 caracteres : color morado.
+   
+     ![](http://i63.tinypic.com/14dgiyp.png)
+     
 [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.3)
 
 ## Version 4
@@ -84,6 +116,9 @@ twitter-events/
   * Al presionar enter  crece el textarea de acuerdo al tamaño del texto.
 
 ```
+
+  ![](http://i63.tinypic.com/o6cu4x.png)
+  
 [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.4)
 
 ## Version 5
@@ -91,7 +126,9 @@ twitter-events/
 ```
    Funcionalidades:
    
-  * Si la cantidad de caracteres ingresados (sin dar un enter), supera al tamaño del textarea por defecto, debe de agregarse una línea más para que no aparezca el scroll. (Si en caso aplica).
+  * Si la cantidad de caracteres ingresados (sin dar un enter), supera al tamaño del textarea por defecto,
+  
+  debe de agregarse una línea más para que no aparezca el scroll. (Si en caso aplica).
 
 
 ```
@@ -107,4 +144,7 @@ twitter-events/
  
 
 ```
+
+  ![](http://i66.tinypic.com/opnuhx.png)
+  
  [Ver Código](https://github.com/sthecrash/twitter-events/tree/v0.0.6)
